@@ -1,0 +1,83 @@
+.b-bg {
+    width: 100%;
+    height: 100%;
+    background: url(../img/QixiB-dark.png);
+    background-size: 100% 100%;
+    position: absolute;
+}
+/* 
+* 稍微注意下的就是商店的灯的亮度切换采用的是切换背景图片
+* 背景图如果是没有预加载的话就有一个闪屏的问题，
+* 所以特意做了一个b_background_preload的节点让图片先加载，设置一个坐标不可见
+* 预加载使用
+*  */
+
+.b-bg-preload {
+    background: url(../img/QixiB-bright.png) no-repeat -9999px -9999px;
+}
+
+.lamp-bright {
+    background-image: url(../img/QixiB-bright.png)
+}
+
+.shop {
+    width: 39.5%;
+    height: 35.5%;
+    position: absolute;
+    left: 29%;  
+    top: 36.5%;
+}
+
+.door {
+    width: 32%;
+    height: 100%;
+    position: absolute;
+    left: 58.5%;
+    top: 32%;
+    overflow: hidden;
+}
+.door-l, .door-r {
+    width: 50%;
+    height: 68.5%;
+    position: absolute;
+}
+.door-l {
+    left: 0%;
+    background: url(../img/door-left.png);
+    background-size: 100% 100%;
+}
+.door-r {
+    left: 50%;
+    background: url(../img/door-right.png);
+    background-size: 100% 100%;
+}
+
+/*鸟*/
+
+.bird {
+    min-width: 91px;
+    min-height: 71px;
+    top: 10%;
+    position: absolute;
+    z-index: 10;
+    right: -91px;
+    background: url(../img/bird.png) -182px 0px no-repeat;
+}
+.birdFly {
+    animation: bird-slow 400ms infinite step-start;
+}
+
+@keyframes bird-slow {
+    0% {
+        background-position: -182px 0px;
+    }
+    50% {
+        background-position: 0px 0px;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100% {
+        background-position: -182px 0px;
+    }
+}

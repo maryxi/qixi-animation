@@ -1,0 +1,95 @@
+.a-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.a-background .a-background-top {
+    width: 100%;
+    height: 71.6%;
+    background: url(../img/background/a_background_top.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.a-background .a-background-middle {
+    width: 100%;
+    height: 13.1%;
+    background: url(../img/background/a_background_middle.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.a-background .a-background-bottom {
+    width: 100%;
+    height: 15.3%;
+    background: url(../img/background/a_background_bottom.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*小孩停止走动*/
+.pause-walk {
+    -webkit-animation-play-state: paused;
+}
+
+/*太阳的动画以及样式*/
+#sun{
+    background: url(../img/sun.png);
+    width: 201px;
+    height: 201px;
+    position: absolute;
+    z-index: 1;
+    right: 40%;
+    top: -30px;
+}
+
+.rotation {
+    animation: rotation 30s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-2000px) translateY(400px);
+    }
+}
+
+/*云的动画和样式*/
+.cloud {
+    position: absolute;
+    z-index: 2;
+}
+.cloud1 {
+    width: 181px;
+    height: 101px;
+    background: url(../img/cloud1.png) no-repeat;
+    left: -5%;
+    top: 15%;
+}
+.cloud2 {
+    width: 301px;
+    height: 140px;
+    background: url(../img/cloud2.png) no-repeat;
+    right: -5%;
+}
+.cloud1Anim {
+    animation: smallCloud 30s infinite;
+}
+.cloud2Anim {
+    animation: largeCloud 60s infinite;
+}
+@keyframes smallCloud {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@keyframes largeCloud {
+    0% {
+        right: -5%;
+    }
+    100% {
+        right: 100%;
+    }
+}
